@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-0: oklch(18% 0.01 15);
+  --color-surface-1: oklch(22% 0.01 15);
+  --color-surface-2: oklch(28% 0.01 15);
+  --color-text-primary: oklch(92% 0.01 90);
+  --color-text-secondary: oklch(65% 0.01 90);
+  --color-tomato: oklch(68% 0.21 25);
+  --color-tomato-bright: oklch(72% 0.23 25);
+  --color-amber: oklch(75% 0.14 80);
+  --color-teal: oklch(68% 0.09 195);
+  --color-rose: oklch(60% 0.17 10);
+  --text-base: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  background: var(--color-surface-0);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-tomato);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(40% 0.01 15);
+  border-radius: 2px;
+}
